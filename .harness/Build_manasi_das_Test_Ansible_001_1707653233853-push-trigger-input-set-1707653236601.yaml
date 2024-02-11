@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_manasi_das_Test_Ansible_001_1707653233853-push-trigger-input-set
+  identifier: Build_manasi_das_Test_Ansible_001_1707653233853pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_manasi_das_Test_Ansible_001_1707653233853
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
