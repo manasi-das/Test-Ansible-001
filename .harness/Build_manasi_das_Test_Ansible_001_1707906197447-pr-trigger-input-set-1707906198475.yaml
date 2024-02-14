@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_manasi_das_Test_Ansible_001_1707906197447-pr-trigger-input-set
+  identifier: Build_manasi_das_Test_Ansible_001_1707906197447prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Test01
+  pipeline:
+    identifier: Build_manasi_das_Test_Ansible_001_1707906197447
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
