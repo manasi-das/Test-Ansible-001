@@ -22,9 +22,24 @@ pipeline:
                       identifier: echo
                       name: echo
                       spec:
+                        shell: Bash
                         command: echo hello world
                       timeout: ""
                       type: Run
+                  - step:
+                      type: Run
+                      name: Run_2
+                      identifier: Run_2
+                      spec:
+                        shell: Bash
+                        command: hostname
+                  - step:
+                      type: Plugin
+                      name: Plugin_1
+                      identifier: Plugin_1
+                      spec:
+                        connectorRef: account.harnessImage
+                        image: plugin/slack
               platform:
                 arch: Amd64
                 os: Linux
@@ -56,3 +71,7 @@ pipeline:
                         repo: mdasmrvcloud84/test-ansible-001
                         tags:
                           - test-ansible-001
+                      when:
+                        stageStatus: All
+  delegateSelectors:
+    - docker-delegate
